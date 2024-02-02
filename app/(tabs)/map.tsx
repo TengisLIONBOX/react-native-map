@@ -41,21 +41,23 @@ export default function Map() {
   };
   // console.log(data1);
 
-  const info = async () => {
-    // const response1 = await axios.get(
-    //   `https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/${ids}`,
-    //   {
-    //     headers: {
-    //       "X-RapidAPI-Key":
-    //         "fda9945fc6msh3d38c07c56e6013p18429ajsn21c639670159",
-    //       "X-RapidAPI-Host": "opentripmap-places-v1.p.rapidapi.com",
-    //     },
-    //   }
-    // );
+  const info = async (id: string) => {
+    const response1 = await axios.get(
+      `https://opentripmap-places-v1.p.rapidapi.com/en/places/xid/${id}`,
+      {
+        headers: {
+          "X-RapidAPI-Key":
+            "fda9945fc6msh3d38c07c56e6013p18429ajsn21c639670159",
+          "X-RapidAPI-Host": "opentripmap-places-v1.p.rapidapi.com",
+        },
+      }
+    );
     // setData1(response1);
     // data1.map((el: any) => {
     //   console.log(el[1]);
     // });
+
+    console.log(response1);
   };
 
   return (
